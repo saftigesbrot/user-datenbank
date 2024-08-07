@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Datenbank</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+
+</head>
+
+<body>
+
+    <div class="Sidebar">
+        <button onclick="AwaitLoadUserData()" class="Button1"><i class="fa-solid fa-loader"></i> Daten laden</button>
+        <details class="Details">
+            <summary class="Details-Summary">Filter</summary>
+                <input type="checkbox" class="Checkbox" id="Alter1" onclick="FilterFunction(this.id)"> Jünger als 40<br>
+                <input type="checkbox" class="Checkbox" id="Alter2" onclick="FilterFunction(this.id)"> 40 oder älter<br>
+                <input type="checkbox" class="Checkbox" id="Rang1" onclick="FilterFunction(this.id)"> CEO<br>
+                <input type="checkbox" class="Checkbox" id="Rang2" onclick="FilterFunction(this.id)"> Mitarbeiter<br>
+                <input type="checkbox" class="Checkbox" id="Rang3" onclick="FilterFunction(this.id)"> Azubi<br>
+        </details>
+
+    </div>
+    <div class="User-Datenbank">
+        <div class="Ü1">User-Datenbank</div>
+        <div id="UserBox">
+        </div>
+    </div>
+
+</body>
+
+</html>

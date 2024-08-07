@@ -1,0 +1,97 @@
+body {
+    margin: 0px;
+    background-color: rgb(57, 55, 64);
+    color: white;
+    font-family: Helvetica;
+}
+
+/*#########################Texte#########################*/
+.Ü1 {
+
+    font-size: 35pt;
+    display: inline-table;
+}
+
+.Ü2 {
+
+    font-size: 18pt;
+    margin-bottom: 5%;
+}
+
+.Text1 {
+
+    font-size: 15pt;
+}
+
+/*#########################Weiteres#########################*/
+.Sidebar {
+
+    position: fixed;
+    height: 100%;
+    width: 15%;
+    background-color: rgb(41, 35, 34);
+    padding-top: 1%;
+}
+
+.User-Datenbank {
+    padding-left: 16.5%;
+    padding-top: 1%;
+}
+
+.UserBox {
+
+    display: inline-table;
+    background-color: rgb(41, 35, 34);
+    border-color: white;
+    padding: 6%;
+    border-radius: 20px;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    min-width: 20%;
+}
+
+.UserBoxPlacement {
+
+    display: inline-table;
+}
+
+.Button1 {
+
+    font-size: 22pt;
+    background-color: transparent;
+    border: none;
+    color: white;
+    background-color: rgb(57, 55, 64);
+    padding: 4%;
+    border-radius: 10px;
+    display: inline-table;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+.Button1:hover {
+
+    color:rgb(186, 183, 182);
+    cursor: pointer;
+}
+
+.Details {
+
+    color: white;
+    margin-left: 8%;
+    font-size: 18pt;
+}
+
+.Details-Summary:hover {
+
+    color:rgb(186, 183, 182);
+    cursor: pointer;
+}
+
+.Checkbox {
+
+    height: 20px;
+    width: 20px;
+}
+

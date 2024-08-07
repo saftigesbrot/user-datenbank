@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Marius Schulze",
+    "alter": 45,
+    "position": "CEO",
+    "bemerkung": "Der ist sicher super cool"
+  },
+  {
+    "name": "Ben Harbour",
+    "alter": 23,
+    "position": "Azubi",
+    "bemerkung": "Der ist absolut nicht cool"
+  },
+  {
+    "name": "Max Mustermann",
+    "alter": 67,
+    "position": "Mitarbeiter",
+    "bemerkung": "Gammeltomaten"
+  }
+]
