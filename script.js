@@ -1,21 +1,23 @@
 let UserData; // Globale Variable zum Speichern der Vergleichsdaten
 let LoadVariable = 0; //Globale Variabel zum Speichern des zu Ladenden Arrays
 
+// Delay Funktion
 function delay(n) {
     return new Promise(function (resolve) {
         setTimeout(resolve, n * 1000);
     });
 }
 
+//Lädt die UserDaten aus der UserData.json Datei
 function getUserData() {
-    console.log("1")
-    fetch('./data/UserData.json') // Läd die JSON Datei
-        .then(response => response.json()) // Sendet eine Response von der JSON
+    fetch('./data/UserData.json') 
+        .then(response => response.json()) 
         .then(data => {
             UserData = data
         });
 }
 
+//Wartet auf das Laden der Daten und startet dann die Anzeige
 async function AwaitLoadUserData() {
 
     getUserData()
@@ -24,9 +26,11 @@ async function AwaitLoadUserData() {
     LoadUserData()
 }
 
+// Geht die einzelnen Datensätze Datensätze durch und stellt sie grafisch da
+// Funktion ruft sich selber wieder auf und stellt nächsten Datensatz da
 function LoadUserData() {
 
-    if (UserData[LoadVariable] != undefined) { //Überprüft ob es den gesuchten Array überhaupt gibt
+    if (UserData[LoadVariable] != undefined) { 
         document.getElementById("UserBox").innerHTML += `
         <div id="${LoadVariable}" class="UserBoxPlacement">
         <div class="UserBox">
@@ -42,6 +46,9 @@ function LoadUserData() {
     }
 }
 
+// Überprüft ob jeweilige Checkbox bereits aktiviert ist oder nicht
+// Wenn Sie bereits aktiviert ist, wird der Filter zurück gesetzt
+// Wenn er nicht aktiv ist werden die Daten geladen und die jeweilige Funktion abgerufen, nach der Gefiltert werden soll
 async function FilterFunction(ID) { 
     let FilterVariable = 0; 
     const NewID = ID 
@@ -59,6 +66,8 @@ async function FilterFunction(ID) {
     }
 }
 
+// Überprüft das Alter
+// Wenn das Alter nicht passend ist, wird der Eintrag visuell gelöscht
 function Alter1(FilterVariable) {
 
     if (UserData[FilterVariable] != undefined) { 
@@ -76,6 +85,8 @@ function Alter1(FilterVariable) {
     }
 }
 
+// Überprüft das Alter
+// Wenn das Alter nicht passend ist, wird der Eintrag visuell gelöscht
 function Alter2(FilterVariable) {
 
     if (UserData[FilterVariable] != undefined) {
@@ -93,6 +104,8 @@ function Alter2(FilterVariable) {
     }
 }
 
+// Überprüft die Position auf CEO
+// Wenn das Alter nicht passend ist, wird der Eintrag visuell gelöscht
 function Rang1(FilterVariable) {
 
     if (UserData[FilterVariable] != undefined) {
@@ -111,6 +124,8 @@ function Rang1(FilterVariable) {
     }
 }
 
+// Überprüft die Position auf Mitarbeiter
+// Wenn das Alter nicht passend ist, wird der Eintrag visuell gelöscht
 function Rang2(FilterVariable) {
 
     if (UserData[FilterVariable] != undefined) {
@@ -129,6 +144,8 @@ function Rang2(FilterVariable) {
     }
 }
 
+// Überprüft die Position auf Azubi
+// Wenn das Alter nicht passend ist, wird der Eintrag visuell gelöscht
 function Rang3(FilterVariable) {
 
     if (UserData[FilterVariable] != undefined) {
